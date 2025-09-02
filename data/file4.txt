@@ -1,0 +1,1 @@
+Data structures like lists, sets, and dictionaries are essential in Python.

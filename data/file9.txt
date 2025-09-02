@@ -1,0 +1,1 @@
+Distributed systems allow scaling of search engines across many machines.
