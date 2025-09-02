@@ -17,7 +17,7 @@ def tokenize(text):
     return text.lower().translate(translator).split() # Formats the text; lowercases it and removes whitespace
 
 def build_inverted_index(documents):
-    index = {} # creating an empty index dictionary
+    index = {} # creating an empty dictionary to hold the inverted index
     for doc_id, text in documents.items():
         for word in tokenize(text):
             if word not in index: 
