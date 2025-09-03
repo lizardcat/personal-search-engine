@@ -28,3 +28,24 @@ def build_inverted_index(documents):
 def search(index, query): 
     query = query.lower()
     return index.get(query, set())
+
+def main():
+    print("Loading documents. . .")
+    documents = load_documents(DATA_DIR)
+
+    print("Building inverted index. . .")
+    index = build_inverted_index(documents)
+
+    print("Search engine ready. Type 'quit' to exit.")
+    while True: 
+        query = input("Enter search term: ").strip()
+        if query == "quit": 
+            break
+        results = search(index, query)
+        if results: 
+            print("Found in:", ", ".join(results))
+        else: 
+            print("No matches found.")
+
+if __name__ == "__main__":
+    main()
